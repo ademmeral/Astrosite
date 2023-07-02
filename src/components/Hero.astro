@@ -1,0 +1,31 @@
+---
+import fwLogos from "../assets/framework-logos.png";
+import fwLogosSmall from "../assets/framework-logos-small.png";
+import "../styles/hero.sass";
+
+type Props = {
+  title:string,
+  subtext:string,
+  imgVisible:boolean
+  imgSmall?:boolean
+  desc:boolean
+}
+const {title, subtext, desc, imgVisible, imgSmall = false} = Astro.props;
+---
+
+<section class="hero">
+  <div class="container">
+    <article class="content">
+      <h1>{title}</h1>
+      <p>{subtext}</p>
+    </article>
+    { imgVisible &&
+      <figure>
+          <img src={imgSmall ? fwLogosSmall : fwLogos} alt="JavaScript Frameworks" />
+      </figure>
+    }
+    { desc && 
+      <small>This is a Demo inspired by Traversy Media</small>
+    }   
+  </div>
+</section>

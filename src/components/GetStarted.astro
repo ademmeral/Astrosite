@@ -1,0 +1,60 @@
+---
+import '../styles/getStarted.sass'
+import cliImg from '../assets/cli.png';
+---
+
+<section class="gs-section">
+  <div class="container">
+    <div class="left">
+      <h3>Get Started With Astro</h3>
+      <p>
+        Astro is a new project up and running locally with out helpful
+        create-astro CLI wizard.
+      </p>
+      <div class="cli-text">
+        <ul>
+          <li class="active">NPM</li>
+          <li>PNPM</li>
+          <li>YARN</li>
+        </ul>
+        <code>$ npm create astro@latest</code>
+      </div>
+      <h4>Start Bulding</h4>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus inventore, architecto perspiciatis temporibus voluptatum odio, nam laudantium fuga harum sequi dolores aut quia, dolor explicabo ratione ea. Soluta, repellendus at.
+      </p>
+    </div>
+    <figure class="right cli-img">
+      <img src={cliImg} alt="npm pnpm yarn cli"/>
+      <div class="overlay">
+        <code>$ npm create astro@latest</code>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<script>
+  const code = [...document.querySelectorAll('.gs-section code')] as HTMLElement[];
+  const ul = document.querySelector('.cli-text ul') as HTMLElement
+
+  const setClass = (target:HTMLElement) :void => {
+    [...ul.children].forEach(el => {
+        if (el !== target) el.classList.remove('active')
+        else el.classList.add('active');
+      })
+  };
+  const func = (e:Event) => {
+    
+      const target = e.currentTarget as HTMLElement 
+      let text = target.textContent?.toLowerCase() //.toLowerCase();
+      const cli = `$ ${text} create astro@latest`;
+      code[0].textContent = cli;
+      code[1].textContent = cli;
+      
+      setClass(e.currentTarget as HTMLElement)
+    }
+  [...ul.children].forEach(el => {
+    el.addEventListener('click', func)
+  });
+
+</script>

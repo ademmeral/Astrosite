@@ -1,0 +1,32 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Card from "../components/Card.astro";
+import '../styles/singlePost.sass';
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob("../posts/*.md");
+  return posts.map((post) => ({
+    params: {
+      slug: post.frontmatter.slug,
+    },
+    props: { post }
+  }));
+};
+
+const { Content, frontmatter } = Astro.props.post;
+---
+
+<MainLayout>
+  <section class="single-post">
+    <div class="container">
+      <Card title={frontmatter.title} button={false}>
+        <small>
+          Written by <b>{frontmatter.author}</b> on
+          <span class="muted">{frontmatter.date}</span>
+        </small>
+        <Content />
+        <a href="/blog" class="btn">Go Back</a>
+      </Card>
+    </div>
+  </section>
+</MainLayout>

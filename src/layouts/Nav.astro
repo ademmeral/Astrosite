@@ -1,0 +1,27 @@
+---
+const links = ["Blog", "Skills", "Showcase", "About", "Contact"];
+---
+
+<nav>
+  <div class="container">
+    <h2 class="nav__logo">
+      <a href="/">
+        <img
+          src="../../public/favicon.svg"
+          alt="Astro Logo"
+          width="50"
+          height="50"
+        />
+      </a>
+    </h2>
+    <ul class="nav__links">
+      {
+        links.map((link:string) => (
+          <li>
+            <a href={link.toLowerCase()}>{link}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</nav>

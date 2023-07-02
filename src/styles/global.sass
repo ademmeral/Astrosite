@@ -1,0 +1,78 @@
+$clr-primary : #0f172a
+$clr-secondary : #6b21a8
+/*-------------VARIABLES-----------------*/
+*,
+*::after,
+*::before
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+html,
+body
+  min-height: 100vh
+
+body
+  background: linear-gradient(to bottom, $clr-primary, $clr-secondary)
+  color: #fff
+  font-family: 'Roboto', sans-serif
+
+main
+  min-height: calc( 100vh - 130px)
+
+section
+  padding: 3rem 0
+
+ul
+  list-style: none
+a
+  color: inherit
+  text-decoration: none
+  display: block
+  height: 100%
+
+h1
+  font-size: 3rem
+h2
+  font-size: 2.5rem
+h3
+  font-size: 2.25rem
+h4
+  font-size: 2rem
+h5
+  font-size: 1.5rem
+h6
+  font-size: 1.15rem
+
+.container
+  max-width: 1280px
+  margin: 0 auto
+/*----------------- RESET -----------------*/
+nav
+  height: 80px
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: .5rem 0
+    ul
+      display: flex
+      list-style: none
+      gap: .5rem
+      color: #fff
+      justify-content: space-evenly
+      gap: .75rem
+      font-size: 1.15rem
+
+footer
+  height: 50px
+  padding: .5rem 0
+  display: flex
+  justify-content: center
+  align-items: center
+  background: $clr-primary
+  .container
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 1rem 0

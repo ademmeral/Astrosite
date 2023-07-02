@@ -1,0 +1,18 @@
+---
+type Props = {
+  title : string,
+  content? : string,
+  button?:boolean
+  btnText?:string
+  slug?:string
+};
+const {title, content, button = false, btnText, slug} = Astro.props as Props;
+---
+<li class="card">
+  <h6>{title}</h6>
+  <slot />
+  <p>{content}</p>
+  { button &&
+    <a href={slug} class="btn">{btnText}</a>
+  }
+</li>

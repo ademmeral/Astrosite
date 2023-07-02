@@ -1,0 +1,37 @@
+---
+import Nav from './Nav.astro';
+import Footer from './Footer.astro';
+import '../styles/global.sass';
+
+interface Props{
+  section? : string
+};
+const {section} = Astro.props as Props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>My Portfolio | {section}</title>
+  </head>
+  <body>
+    <Nav />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

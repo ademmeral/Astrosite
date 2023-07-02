@@ -1,0 +1,42 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Card from "../components/Card.astro";
+import Hero from "../components/Hero.astro";
+import '../styles/blog.sass';
+import '../styles/hero.sass';
+
+
+const getPosts = await Astro.glob("../posts/*.md");
+const posts = getPosts.map(post => (
+  {frontmatter : post.frontmatter}
+)).sort((a,b) => b.frontmatter.date.localeCompare(a.frontmatter.date))
+// console.log(sorted)
+---
+<MainLayout section="Blog">
+    <Hero 
+    title="Astro Blog" 
+    subtext="A simple blog built with Astro"
+    imgVisible={false}
+    desc={false}
+  />
+  <section class="blog">
+    <ul class="blog__cards container">
+      {
+        posts.map(({frontmatter}) => (
+          <Card 
+            title={frontmatter.title} 
+            content={frontmatter.excerpt}
+            button={true}
+            btnText="Read More"
+            slug={frontmatter.slug}
+          >
+            <small>
+              Written by <b>{frontmatter.author}</b> on 
+              <span class="muted">{frontmatter.date}</span>
+            </small>
+          </Card>
+        ))
+      }
+    </ul>
+  </section>
+</MainLayout>

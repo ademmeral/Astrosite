@@ -1,0 +1,22 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Cards from "../components/Cards.astro";
+import GetStarted from "../components/GetStarted.astro";
+import Hero from "../components/Hero.astro";
+
+const subtext = "Build super fast HTML-first websites using your favorite JavaScript frameworks";
+
+const title = "Welcome To Astros' World";
+---
+
+<MainLayout section="Home">
+	<Hero 
+		title={title} 
+		subtext={subtext} 
+		imgVisible={true} 
+		imgSmall={false}
+		desc={true}	
+	/>
+	<Cards />
+	<GetStarted />
+</MainLayout>
