@@ -28,7 +28,7 @@ const posts = getPosts.map(post => (
             content={frontmatter.excerpt}
             button={true}
             btnText="Read More"
-            slug={frontmatter.slug}
+            slug={`/${frontmatter.slug}`}
           >
             <small>
               Written by <b>{frontmatter.author}</b> on 
