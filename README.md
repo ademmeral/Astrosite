@@ -4,9 +4,7 @@
 npm create astro@latest -- --template minimal
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+[![Open in Netlify](https://upload.wikimedia.org/wikipedia/commons/b/b8/Netlify_logo.svg)](https://boisterous-medovik-57fb3b.netlify.app/)
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
@@ -17,9 +15,38 @@ Inside of your Astro project, you'll see the following folders and files:
 ```
 /
 ├── public/
+│       └── favicon.svg
 ├── src/
 │   └── pages/
 │       └── index.astro
+│       └── [slug].astro
+│       └── about.astro
+│       └── blog.astro
+│   └── layouts/
+│       └── Footer.astro
+│       └── MainLayout.astro
+│       └── Nav.astro
+│   └── components/
+│       └── Card.astro
+│       └── Cards.astro
+│       └── GetStarted.astro
+│       └── Hero.astro
+│   └── style/
+│       └── about.sass
+│       └── blog.sass
+│       └── cards.sass
+│       └── cards.sass
+│       └── getStarted.sass
+│       └── global.sass
+│       └── hero.sass
+│       └── singlePost.sass
+│   └── assets/
+│       └── cli.png
+│       └── deploy-logos-small.png
+│       └── deploy-logos.png
+│       └── frameworks-logos-small.png
+│       └── frameworks-logos.png
+│       └── favicon.svg
 └── package.json
 ```
 
