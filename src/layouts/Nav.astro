@@ -20,7 +20,7 @@ const links = ["Blog", "About"];
       {
         links.map((link:string) => (
           <li>
-            <a href={link.toLowerCase()}>{link}</a>
+            <a href={`/${link.toLowerCase()}`}>{link}</a>
           </li>
         ))
       }
