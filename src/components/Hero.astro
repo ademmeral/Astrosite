@@ -1,6 +1,5 @@
 ---
 import fwLogos from "../assets/framework-logos.png";
-import fwLogosSmall from "../assets/framework-logos-small.png";
 import "../styles/hero.sass";
 
 type Props = {
@@ -21,7 +20,7 @@ const {title, subtext, desc, imgVisible, imgSmall = false} = Astro.props;
     </article>
     { imgVisible &&
       <figure>
-          <img src={imgSmall ? fwLogosSmall : fwLogos} alt="JavaScript Frameworks" />
+          <img src={fwLogos} alt="JavaScript Frameworks" />
       </figure>
     }
     { desc && 

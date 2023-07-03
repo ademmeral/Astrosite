@@ -49,12 +49,12 @@ h6
   margin: 0 auto
 /*----------------- RESET -----------------*/
 nav
-  height: 80px
+  max-height: 80px
+  padding-top: 0.25rem
   .container
     display: flex
     justify-content: space-between
     align-items: center
-    padding: .5rem 0
     ul
       display: flex
       list-style: none
@@ -70,9 +70,18 @@ footer
   display: flex
   justify-content: center
   align-items: center
-  background: $clr-primary
   .container
     display: flex
     justify-content: center
     align-items: center
     padding: 1rem 0
+
+@media screen and (max-width : 900px)
+.container
+  padding: 0 .25rem
+
+@media screen and ( max-width: 500px )
+  p
+    font-size: .9rem !important
+  small
+    font-size: .8rem !important

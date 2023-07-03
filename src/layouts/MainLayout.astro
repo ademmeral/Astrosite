@@ -35,3 +35,14 @@ const {section} = Astro.props as Props;
     <Footer />
   </body>
 </html>
+
+<script>
+    import imgSm from '../assets/framework-logos-small.png'
+    document.addEventListener('DOMContentLoaded', (e:Event):void => {
+    let cond = window.innerWidth < 900
+    if (cond) {
+      const img = document.querySelector('.hero figure img') as HTMLImageElement;
+      img.src = imgSm;
+    }
+  })
+</script>

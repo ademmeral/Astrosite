@@ -1,10 +1,10 @@
 ---
-const links = ["Blog", "Skills", "Showcase", "About", "Contact"];
+const links = ["Blog", "About"];
 ---
 
 <nav>
   <div class="container">
-    <h2 class="nav__logo">
+    <figure class="nav__logo">
       <a href="/">
         <img
           src="../../public/favicon.svg"
@@ -13,7 +13,7 @@ const links = ["Blog", "Skills", "Showcase", "About", "Contact"];
           height="50"
         />
       </a>
-    </h2>
+    </figure>
     <ul class="nav__links">
       {
         links.map((link:string) => (
