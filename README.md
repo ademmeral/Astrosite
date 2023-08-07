@@ -1,8 +1,4 @@
-# Astro Starter Kit: Minimal
-
-```
-npm create astro@latest -- --template minimal
-```
+# Astrosite
 
 [![Open in Netlify](https://upload.wikimedia.org/wikipedia/commons/b/b8/Netlify_logo.svg)](https://boisterous-medovik-57fb3b.netlify.app/)
 
